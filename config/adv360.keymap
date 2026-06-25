@@ -58,19 +58,6 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
         };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
-            flavor = "tap-preferred";
-        };
     };
 
     keymap {
@@ -90,11 +77,11 @@
         Qwerty {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 2                                                          &mo 4      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &rgb_ug RGB_TOG                                                 &none      &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none            &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp HOME      &kp PG_UP                        &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC         &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 3
+&kp EQUAL  &kp N1        &kp N2           &kp N3             &kp N4           &kp N5  &tog 2                                                          &mo 4      &kp N6  &kp N7            &kp N8              &kp N9            &kp N0                &kp MINUS
+&kp TAB    &kp Q         &kp W            &kp E              &kp R            &kp T   &rgb_ug RGB_TOG                                                 &none      &kp Y   &kp U             &kp I               &kp O             &kp P                 &kp BSLH
+&kp ESC    &HML LCTRL A  &HML LEFT_ALT S  &HML LEFT_SHIFT D  &HML LEFT_GUI F  &kp G   &none            &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &HMR RIGHT_GUI J  &HMR RIGHT_SHIFT K  &HMR RIGHT_ALT L  &HMR RCTRL SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z         &kp X            &kp C              &kp V            &kp B                               &kp HOME      &kp PG_UP                        &kp N   &kp M             &kp COMMA           &kp DOT           &kp FSLH              &kp RSHFT
+&mo 3      &kp GRAVE     &kp CAPS         &kp LEFT           &kp RIGHT                &kp BSPC         &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP            &kp DOWN            &kp LBKT          &kp RBKT              &mo 3
             >;
         };
 
@@ -134,11 +121,11 @@
         Colemak {
             display-name = "Colemak";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 2                                                          &mo 4      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0         &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp G   &rgb_ug RGB_TOG                                                 &none      &kp J   &kp L   &kp U      &kp Y     &kp SEMICOLON  &kp BSLH
-&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp D   &none            &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp N   &kp E      &kp I     &kp O          &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp HOME      &kp PG_UP                        &kp K   &kp M   &kp COMMA  &kp DOT   &kp FSLH       &kp RSHFT
-&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC         &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT       &mo 3
+&kp EQUAL  &kp N1        &kp N2           &kp N3             &kp N4           &kp N5  &tog 2                                                          &mo 4      &kp N6  &kp N7            &kp N8              &kp N9            &kp N0         &kp MINUS
+&kp TAB    &kp Q         &kp W            &kp F              &kp P            &kp G   &rgb_ug RGB_TOG                                                 &none      &kp J   &kp L             &kp U               &kp Y             &kp SEMICOLON  &kp BSLH
+&kp ESC    &HML LCTRL A  &HML LEFT_ALT R  &HML LEFT_SHIFT S  &HML LEFT_GUI T  &kp D   &none            &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &HMR RIGHT_GUI N  &HMR RIGHT_SHIFT E  &HMR RIGHT_ALT I  &HMR RCTRL O   &kp SQT
+&kp LSHFT  &kp Z         &kp X            &kp C              &kp V            &kp B                               &kp HOME      &kp PG_UP                        &kp K   &kp M             &kp COMMA           &kp DOT           &kp FSLH       &kp RSHFT
+&mo 3      &kp GRAVE     &kp CAPS         &kp LEFT           &kp RIGHT                &kp BSPC         &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP            &kp DOWN            &kp LBKT          &kp RBKT       &mo 3
             >;
         };
     };
